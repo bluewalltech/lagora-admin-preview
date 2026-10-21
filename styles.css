@@ -448,3 +448,4 @@ main.enter > *:nth-child(n + 5) { animation-delay: 0.16s; }
 .slots { grid-template-columns: 64px minmax(0, 1fr); }
 .booking { max-width: 100%; flex-wrap: wrap; text-align: left; }
 @media (max-width: 560px) { .slots { grid-template-columns: 48px minmax(0, 1fr); } .cap { width: 48px; } }
+@media (max-width: 1200px) { #today { display: none; } }
