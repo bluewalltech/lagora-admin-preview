@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Gora Loyalty · Admin</title>
+  <link rel="icon" href="logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=10" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <img src="logo.svg" alt="Vinarija La Gora" class="brand-logo" />
+        <div>
+          <div class="caption dim">Loyalty</div>
+          <div class="brand-name">Admin</div>
+        </div>
+      </div>
+      <nav id="nav"></nav>
+      <div class="sidebar-foot">
+        <div class="caption dim">Signed in as</div>
+        <label class="role-select">
+          <select id="role"></select>
+          <ion-icon name="chevron-down"></ion-icon>
+        </label>
+        <button class="link-btn" data-action="reset-demo">Reset demo data</button>
+      </div>
+    </aside>
+    <div class="main-wrap">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" data-action="toggle-menu" aria-label="Menu"><ion-icon name="menu-outline"></ion-icon></button>
+        <div class="search">
+          <ion-icon name="search-outline"></ion-icon>
+          <input id="global-search" placeholder="Find a guest by name, card number, email or phone" autocomplete="off" />
+          <div class="search-results" id="search-results"></div>
+        </div>
+        <div class="topbar-right">
+          <span class="caption dim" id="today"></span>
+          <span class="pill live"><span class="dot"></span>POS connected</span>
+          <a class="icon-btn bell" href="#/feedback" aria-label="Notifications"><ion-icon name="notifications-outline"></ion-icon><span class="badge"></span></a>
+          <div class="me" id="me"></div>
+        </div>
+      </header>
+      <main id="main"></main>
+    </div>
+  </div>
+  <div class="drawer-scrim" id="scrim" data-action="close-drawer"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true"></aside>
+  <div class="tooltip" id="tooltip"></div>
+  <div class="toasts" id="toasts"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
